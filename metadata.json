@@ -1,0 +1,8 @@
+{
+  "name": "Hāneanea Pouaka Kai",
+  "description": "An interactive Te Reo Māori learning game using hand tracking. Wave your hand over the correct lunchbox items in each corner of the screen to answer!",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
