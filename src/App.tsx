@@ -20,7 +20,7 @@ type GameMode = 'explore' | 'quiz' | 'camera';
 type ContainerType = 'lunchbox' | 'plate';
 
 export default function App() {
-  const [mode, setMode] = useState<GameMode>('explore');
+  const [mode, setMode] = useState<GameMode>('camera');
   const [container, setContainer] = useState<ContainerType>('lunchbox');
   const [items, setItems] = useState<FoodItem[]>([]);
   const [quizTarget, setQuizTarget] = useState<{ items: string[], container: ContainerType } | null>(null);

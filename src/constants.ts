@@ -16,7 +16,6 @@ export const KAI_LIST: FoodItem[] = [
   { id: 'biscuit', name: 'Cookie / Biscuit', maori: 'Pihikete', emoji: '🍪', color: 'bg-amber-600' },
   { id: 'cheese', name: 'Cheese', maori: 'Tīhi', emoji: '🧀', color: 'bg-yellow-400' },
   { id: 'carrot', name: 'Carrot', maori: 'Kēreti', emoji: '🥕', color: 'bg-orange-500' },
-  { id: 'plum', name: 'Plum', maori: 'Paramu', emoji: '🟣', image: 'https://vignette.wikia.nocookie.net/prowrestling/images/c/c5/Plum.png/revision/latest?cb=20150917224151', color: 'bg-purple-500' },
   { id: 'milk', name: 'Milk', maori: 'Miraka', emoji: '🥛', color: 'bg-blue-100' },
   { id: 'water', name: 'Water', maori: 'Wai', emoji: '💧', color: 'bg-blue-300' },
   { id: 'grapes', name: 'Grapes', maori: 'Karepe', emoji: '🍇', color: 'bg-purple-400' },
