@@ -20,7 +20,7 @@ export const KAI_LIST: FoodItem[] = [
   { id: 'water', name: 'Water', maori: 'Wai', emoji: '💧', color: 'bg-blue-300' },
   { id: 'grapes', name: 'Grapes', maori: 'Karepe', emoji: '🍇', color: 'bg-purple-400' },
   { id: 'egg', name: 'Egg', maori: 'Hēki', emoji: '🥚', color: 'bg-slate-100' },
-  { id: 'yogurt', name: 'Yogurt', maori: 'Ioka', emoji: '🍯', color: 'bg-pink-100' },
+  { id: 'honey', name: 'Honey', maori: 'Mīere', emoji: '🍯', color: 'bg-pink-100' },
   { id: 'pear', name: 'Pear', maori: 'Peara', emoji: '🍐', color: 'bg-green-300' },
   { id: 'tomato', name: 'Tomato', maori: 'Tōmato', emoji: '🍅', color: 'bg-red-600' },
   { id: 'cucumber', name: 'Cucumber', maori: 'Kūkamo', emoji: '🥒', color: 'bg-green-600' },
