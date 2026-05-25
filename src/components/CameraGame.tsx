@@ -182,38 +182,38 @@ export default function CameraGame({ onExit }: CameraGameProps) {
       <div className="relative h-full flex flex-col z-10 pointer-events-none">
         
         {/* Top Header - The Word */}
-        <header className="p-6 flex items-center justify-between pointer-events-auto">
+        <header className="p-3 sm:p-4 md:p-6 flex items-center justify-between pointer-events-auto">
           <button 
             onClick={onExit}
-            className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-3 rounded-full text-white transition-colors"
+            className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-2.5 sm:p-3 rounded-full text-white transition-colors"
           >
-            <ArrowLeft size={24} />
+            <ArrowLeft size={20} className="sm:w-6 sm:h-6" />
           </button>
 
           <div className="flex flex-col items-center">
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="bg-white/90 backdrop-blur-md py-4 px-12 rounded-3xl shadow-2xl border-2 border-art-green flex flex-col items-center"
+              className="bg-white/95 backdrop-blur-md py-2 px-6 sm:py-3 sm:px-12 rounded-[1.5rem] sm:rounded-3xl shadow-xl border-2 border-art-green flex flex-col items-center"
             >
-              <p className="text-xl font-bold text-art-orange uppercase tracking-widest mb-1">Kimihia tēnei (Find this):</p>
-              <h2 className="text-6xl font-black text-art-green tracking-tight">
+              <p className="text-xs sm:text-sm font-bold text-art-orange uppercase tracking-wider mb-0.5 sm:mb-1">Kimihia tēnei (Find this):</p>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-art-green tracking-tight leading-none">
                 {targetItem?.maori}
               </h2>
             </motion.div>
           </div>
 
-          <div className="bg-art-gold text-white px-6 py-2 rounded-full font-bold shadow-lg">
+          <div className="bg-art-gold text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-sm sm:text-base shadow-lg">
             Score: {score}
           </div>
         </header>
 
         {/* The 4 Corners Layout */}
-        <div className="flex-1 grid grid-cols-2 grid-rows-2 p-6 gap-4">
+        <div className="flex-1 grid grid-cols-2 grid-rows-2 p-3 sm:p-6 gap-3 sm:gap-4">
           {options.map((item, idx) => (
             <div 
               key={`${item.id}-${idx}`}
-              className={`relative flex items-center justify-center p-4 ${
+              className={`relative flex items-center justify-center p-2 sm:p-4 ${
                 idx === 0 || idx === 2 ? 'justify-start' : 'justify-end'
               } ${
                 idx < 2 ? 'items-start' : 'items-end'
@@ -225,7 +225,9 @@ export default function CameraGame({ onExit }: CameraGameProps) {
                 animate={{ scale: 1 }}
                 tabIndex={0}
                 className={`
-                  w-48 h-48 sm:w-64 sm:h-64 bg-white/90 backdrop-blur-md rounded-[2rem] shadow-xl border-4
+                  w-[32vw] h-[32vw] sm:w-[28vw] sm:h-[28vw] md:w-60 md:h-60
+                  landscape:w-[24vh] landscape:h-[24vh] landscape:max-w-[240px] landscape:max-h-[240px]
+                  bg-white/90 backdrop-blur-md rounded-[1.5rem] sm:rounded-[2rem] shadow-xl border-4
                   flex flex-col items-center justify-center relative overflow-hidden transition-all
                   ${hoverIndex === idx ? 'border-art-orange scale-105 shadow-art-orange/20' : 'border-white'}
                 `}
@@ -238,14 +240,19 @@ export default function CameraGame({ onExit }: CameraGameProps) {
                   />
                 )}
 
-                <div className="flex items-center justify-center flex-1 w-full overflow-hidden">
+                <div className="flex items-center justify-center flex-1 w-full min-h-0 p-2 sm:p-4 overflow-hidden">
                   {item.image ? (
-                    <img src={item.image} alt={item.name} className="w-32 h-32 sm:w-48 sm:h-48 object-contain" referrerPolicy="no-referrer" />
+                    <img 
+                      src={item.image} 
+                      alt={item.name} 
+                      className="max-w-[80%] max-h-[80%] object-contain" 
+                      referrerPolicy="no-referrer" 
+                    />
                   ) : (
-                    <span className="text-8xl sm:text-9xl mb-2">{item.emoji}</span>
+                    <span className="text-6xl sm:text-8xl md:text-9xl mb-2">{item.emoji}</span>
                   )}
                 </div>
-                <span className="font-bold text-lg opacity-40 uppercase tracking-tighter">{item.name}</span>
+                <span className="font-bold text-xs sm:text-sm md:text-base opacity-40 uppercase tracking-tighter mb-2 sm:mb-3">{item.name}</span>
               </motion.div>
             </div>
           ))}
